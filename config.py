@@ -1,5 +1,5 @@
 # Configuration - No API keys needed!
-APP_TITLE = "🌊 AI-Powered ARGO Ocean Data Explorer"
+APP_TITLE = "AI-Powered ARGO Ocean Data Explorer"
 APP_SUBTITLE = "Natural Language Interface for Oceanographic Data (Prototype)"
 
 # Sample float data for Indian Ocean

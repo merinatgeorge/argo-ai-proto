@@ -14,7 +14,6 @@ import streamlit.components.v1 as components
 # Page config
 st.set_page_config(
     page_title="ARGO AI Explorer",
-    page_icon="🌊",
     layout="wide",
     initial_sidebar_state="expanded"
 )
@@ -38,7 +37,7 @@ def main():
     
     # Sidebar
     with st.sidebar:
-        st.header("🎯 Demo Options")
+        st.header(" Demo Options")
         
         # Sample queries
         st.subheader("Try These Queries:")
@@ -54,16 +53,16 @@ def main():
         
         # System info
         st.markdown("---")
-        st.subheader("📊 System Status")
-        st.success(f"✅ {len(SAMPLE_FLOATS)} ARGO floats loaded")
-        st.info("🤖 AI Query Processor: Active")
-        st.info("📈 Visualization Engine: Ready")
+        st.subheader(" System Status")
+        st.success(f" {len(SAMPLE_FLOATS)} ARGO floats loaded")
+        st.info(" AI Query Processor: Active")
+        st.info(" Visualization Engine: Ready")
     
     # Main interface
     col1, col2 = st.columns([2, 1])
     
     with col1:
-        st.header("💬 Ask About Ocean Data")
+        st.header(" Ask About Ocean Data")
         
         # Query input
         if selected_query != "Type your own...":
@@ -73,16 +72,16 @@ def main():
         
         # Process query
         if user_query:
-            with st.spinner("🔍 Processing your query..."):
+            with st.spinner(" Processing your query..."):
                 result = query_processor.process_query(user_query)
                 
                 # Display response
-                st.markdown("### 🤖 AI Response")
+                st.markdown("###  AI Response")
                 st.info(result['response'])
                 
                 # Display visualization
                 if result.get('data') and result.get('visualization_type'):
-                    st.markdown("### 📊 Data Visualization")
+                    st.markdown("###  Data Visualization")
                     
                     viz_type = result['visualization_type']
                     data = result['data']
@@ -113,7 +112,7 @@ def main():
                         st.components.v1.html(float_map._repr_html_(), height=500)
     
     with col2:
-        st.header("📈 Live Statistics")
+        st.header(" Live Statistics")
         
         # Quick stats
         active_floats = len([f for f in SAMPLE_FLOATS if f['status'] == 'Active'])
@@ -123,20 +122,20 @@ def main():
         st.metric("Data Coverage", "Indian Ocean", delta="Expanding")
         
         # Recent activity
-        st.subheader("🔄 Recent Activity")
+        st.subheader(" Recent Activity")
         st.success("Float 2902750: New profile received")
         st.info("Float 2902746: Surfaced for data transmission")
         st.warning("Float 2902748: Maintenance mode")
         
         # System capabilities
-        st.subheader("🛠️ Capabilities")
+        st.subheader(" Capabilities")
         capabilities = [
-            "✅ Natural language queries",
-            "✅ Real-time visualizations", 
-            "✅ Multi-parameter analysis",
-            "✅ Regional comparisons",
-            "✅ Export functionality",
-            "🔄 Live data updates (coming soon)"
+            " Natural language queries",
+            " Real-time visualizations", 
+            " Multi-parameter analysis",
+            " Regional comparisons",
+            " Export functionality",
+            " Live data updates (coming soon)"
         ]
         
         for capability in capabilities:
@@ -144,16 +143,16 @@ def main():
     
     # Footer
     st.markdown("---")
-    st.markdown("### 🎯 Demo Features Showcase")
+    st.markdown("###  Demo Features Showcase")
     
     demo_cols = st.columns(3)
     
     with demo_cols[0]:
-        st.markdown("**🗣️ Natural Language Interface**")
+        st.markdown("** Natural Language Interface**")
         st.markdown("Ask questions in plain English and get instant responses with data visualizations.")
     
     with demo_cols[1]:
-        st.markdown("**🗺️ Interactive Visualizations**") 
+        st.markdown("** Interactive Visualizations**") 
         st.markdown("Explore temperature profiles, salinity data, and float locations on interactive maps and charts.")
     
     with demo_cols[2]:
